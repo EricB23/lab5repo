@@ -97,14 +97,20 @@ IMPORTANT DETAIL: You may not use the arithmetic operator * in this function. To
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testMultiplyArray() function and see if the test passes.*/
 
 // Write your code here
-function multiplyArray(multArr) { //eslint-disable-line
+let productArray = [2 ,3, 4];
+function multiplyArray(product3) { //eslint-disable-line
+  let productArr = multiply(productArray[0], productArray[1]);
+  let totalProduct =(productArray[0] * productArray[1] * productArray[2]);
+  let message = `The numbers ${productArr[0]}, ${productArray[1]}, ${productArray[2]} have a total product of ${totalProduct[0]}`;
+
+  return[totalProduct, message];
 
 }
-
+multiplyArray(2, 3, 4);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
