@@ -13,7 +13,7 @@ function sum(a, b) { //eslint-disable-line
   let message = 'The sum of ' + a + ' and ' + b + ' is ' + theSum + '.';
   return [theSum, message];
 }
-sum(4,7);
+//sum(4,7);
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
@@ -30,8 +30,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) { //eslint-disable-line
+  let product = a * b;
+  let productMessage = ' The product of ' + a + ' and ' + b + ' is ' + product + '.';
+  return [product, productMessage];
 
 }
+multiply(5, 9);
 
 // Here is the test for multiply(); uncomment it to run it
 // testMultiply(5,9);
