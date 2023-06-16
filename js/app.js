@@ -9,11 +9,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) { //eslint-disable-line
-
+  let theSum = a + b;
+  let message = 'The sum of ' + a + 'and' + b + 'is' + theSum + '.';
+  return [theSum, message];
 }
-
+sum(4,7);
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+//testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -69,13 +71,18 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray(sumArr) { //eslint-disable-line
+function sumArray(sumArray) { //eslint-disable-line
+  let total = sum(sumArray[0], sumArray[1]);
+  let final = sum(total[0], sumArray[2]);
+  let message = `${sumArray[0]}, ${sumArray[1]}, ${sumArray[2]} are used as an array of number, and ${final} is their sum.`;
 
+  return[total, final, message];
 }
+sumArray(testArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+//testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -97,7 +104,7 @@ function multiplyArray(multArr) { //eslint-disable-line
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
-// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
+// Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
 // You're done! Submit the link to the repo following the instructions in Canvas. Or, try out the stretch goal below...
 
