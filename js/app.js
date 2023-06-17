@@ -55,11 +55,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-  let sum3 = a + b + c;
-  let product3 = a * b * c;
-  let messageSum3 = a + ' and ' + b + ' and ' + c + ' sum to ' + sum3 + '.';
-  let messageProduct3 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + product3 + '.';
-  return[sum3, messageSum3, product3, messageProduct3];
+  let firstSum = sum(a,b);
+  let secondSum= sum(firstSum[0], c);
+
+  let product3 = multiply(a,b)[0];
+  let secondProduct = multiply(product3, c);
+
+  let messageSum3 = a + ' and ' + b + ' and ' + c + ' sum to ' + secondSum[0] + '.';
+
+
+  let messageProduct3 = 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + secondProduct[0] + '.';
+
+  return[secondSum[0], messageSum3, secondProduct[0], messageProduct3];
 }
 sumAndMultiply(4, 7, 5);
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -79,6 +86,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let testArray = [2, 3, 4]; //eslint-disable-line
+//let newArray = [1,2,3];
 
 function sumArray(sumArray) { //eslint-disable-line
   let total = sum(sumArray[0], sumArray[1]);
@@ -88,6 +96,7 @@ function sumArray(sumArray) { //eslint-disable-line
   return[total, final, message];
 }
 sumArray(testArray);
+//sumArray(newArray);
 
 // Here is the test for sumArray(); uncomment it to run it
 
@@ -107,15 +116,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 let productArray = [2 ,3, 4];
-function multiplyArray(product3) { //eslint-disable-line
-  let productArr = multiply(productArray[0], productArray[1]);
-  let totalProduct =(productArray[0] * productArray[1] * productArray[2]);
-  let message = `The numbers ${productArr[0]}, ${productArray[1]}, ${productArray[2]} have a total product of ${totalProduct[0]}`;
 
-  return[totalProduct, message];
+function multiplyArray(productArr) { //eslint-disable-line
+  let product = multiply(productArr[0], productArr[1]);
+  let totalProduct =multiply(product[0] * productArr[2]);
+  let message = `The numbers ${productArr[0]}, ${productArr[1]}, ${productArr[2]} have a total product of ${totalProduct[0]}`;
+
+  return[totalProduct[0], message,];
 
 }
-multiplyArray(2, 3, 4);
+multiplyArray(productArray);
 // Here is the test for multiplyArray(); uncomment it to run it
 // testMultiplyArray(testArray);
 
